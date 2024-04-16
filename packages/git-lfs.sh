@@ -22,9 +22,8 @@ if [ "${GIT_LFS_VERSION:0:1}" -ge 2 ] && [ "${GIT_LFS_VERSION:2:1}" -ge 5 ]; the
         STRIP_COMPONENTS=0
 fi
 
-CACHED_DOWNLOAD="${HOME}/cache/${DOWNLOAD_URL_PREFIX}${GIT_LFS_VERSION}.tar.gz"
 mkdir -p "${GIT_LFS_DIR}"
-wget --continue --output-document "${CACHED_DOWNLOAD}" "https://github.com/github/git-lfs/releases/download/v${GIT_LFS_VERSION}/${DOWNLOAD_URL_PREFIX}${GIT_LFS_VERSION}.tar.gz"
+wget --continue --output-document "https://github.com/github/git-lfs/releases/download/v${GIT_LFS_VERSION}/${DOWNLOAD_URL_PREFIX}${GIT_LFS_VERSION}.tar.gz"
 tar -xaf "${CACHED_DOWNLOAD}" --strip-components=${STRIP_COMPONENTS} --directory "${GIT_LFS_DIR}"
 
 (
