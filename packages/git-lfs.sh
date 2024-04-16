@@ -11,7 +11,7 @@
 #
 GIT_LFS_VERSION=${GIT_LFS_VERSION:="2.7.0"}
 GIT_LFS_DIR=${GIT_LFS_DIR:="./git-lfs"}
-REPO_DIR=$(readlink -f "./clone")
+REPO_DIR=$(readlink -f "${HOME}/clone")
 DOWNLOAD_URL_PREFIX="git-lfs-linux-amd64-"
 STRIP_COMPONENTS=1
 
