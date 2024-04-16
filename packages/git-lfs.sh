@@ -2,7 +2,7 @@
 
 REPO_DIR=$(readlink -f "${HOME}/clone")
 
-apt-get install git-lfs
+apt-get install git-lfs -y
 
 (
   cd "${REPO_DIR}" || exit 1
